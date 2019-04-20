@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(128, 128, 128);
+}
+
+.wrapper {
+  height: 250px;
+  width: 150px;
+  margin: 15rem auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  background: green;
+  border-radius: 50%;
+  background-image: linear-gradient(0deg, #0827ea 0%, #2adbf5 95%);
+  animation-name: bounce;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 5;
+}
+
+.shadow {
+  content: "";
+  display: inline-block;
+  background: rgba(51, 51, 51, 0.5);
+  width: 50px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 10px rgba(51, 51, 51, 0.5);
+  margin: 0 auto;
+  animation-name: shadowAnimation;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: -1;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    width: 150px;
+  }
+  10% {
+    transform: translateY(10px);
+    width: 152px;
+  }
+  20% {
+    transform: translateY(20px);
+    width: 154px;
+  }
+  30% {
+    transform: translateY(30px);
+    width: 156px;
+  }
+  40% {
+    transform: translateY(40px);
+    width: 158px;
+  }
+  50% {
+    transform: translateY(50px);
+    width: 160px;
+  }
+  60% {
+    transform: translateY(60px);
+    width: 162px;
+  }
+  70% {
+    transform: translateY(70px);
+    width: 164px;
+  }
+  80% {
+    transform: translateY(80px);
+    width: 166px;
+  }
+  90% {
+    transform: translateY(90px);
+    width: 170px;
+  }
+  100% {
+    transform: translateY(100px);
+    width: 180px;
+  }
+}
+
+@keyframes shadowAnimation {
+  0% {
+    width: 50px;
+  }
+  10% {
+    width: 55px;
+  }
+  20% {
+    width: 60px;
+  }
+  30% {
+    width: 65px;
+  }
+  40% {
+    width: 70px;
+  }
+  50% {
+    width: 75px;
+  }
+  60% {
+    width: 80px;
+  }
+  70% {
+    width: 85px;
+  }
+  80% {
+    width: 90px;
+  }
+  90% {
+    width: 95px;
+  }
+  100% {
+    width: 100px;
+  }
+}
